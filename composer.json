@@ -2,6 +2,7 @@
     "type": "library",
     "name": "inspirecz/coding-standard-sniffs",
     "description": "INSPIRE Coding Standard Sniffs",
+    "license": "MIT",
     "keywords": [
         "coding standard",
         "php",
