@@ -1,0 +1,22 @@
+{
+    "type": "library",
+    "name": "inspirecz/coding-standard-sniffs",
+    "description": "INSPIRE Coding Standard Sniffs",
+    "keywords": [
+        "coding standard",
+        "php",
+        "coding",
+        "standard"
+    ],
+    "require": {
+        "php": ">=7.0",
+        "squizlabs/php_codesniffer": "^3.2"
+    },
+    "authors": [
+        {
+            "name": "INSPIRE CZ s.r.o.",
+            "email": "firma@inspire.cz",
+	    "homepage": "https://www.inspire.cz/"
+        }
+    ]
+}
