@@ -48,7 +48,17 @@ class BlankLinesBeforeReturnSniff implements Sniff
             $currentToken = $tokens[$stackPtr - $i];
 
             if ($currentToken['line'] === $tokenLine - 1) {
-                if (\T_WHITESPACE !== $currentToken['code'] && \T_OPEN_CURLY_BRACKET !== $currentToken['code'] && \T_COMMENT !== $currentToken['code']) {
+                if (
+                    \T_WHITESPACE !== $currentToken['code'] &&
+                    \T_OPEN_CURLY_BRACKET !== $currentToken['code'] &&
+                    \T_COMMENT !== $currentToken['code'] &&
+                    \T_DOC_COMMENT !== $currentToken['code'] &&
+                    \T_DOC_COMMENT_CLOSE_TAG !== $currentToken['code'] &&
+                    \T_DOC_COMMENT_STRING !== $currentToken['code'] &&
+                    \T_DOC_COMMENT_WHITESPACE !== $currentToken['code'] &&
+                    \T_DOC_COMMENT_TAG !== $currentToken['code'] &&
+                    \T_DOC_COMMENT_OPEN_TAG !== $currentToken['code']
+                ) {
                     $error = 'There should be blank line before return statement';
                     $fix = $phpcsFile->addFixableError($error, $stackPtr, 'Invalid');
 
