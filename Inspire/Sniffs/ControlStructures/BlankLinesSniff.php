@@ -66,7 +66,13 @@ class BlankLinesSniff implements Sniff
                     \T_DOC_COMMENT_WHITESPACE !== $currentToken['code'] &&
                     \T_COMMENT !== $currentToken['code'] &&
                     \T_DOC_COMMENT_OPEN_TAG !== $currentToken['code'] &&
-                    \T_DOC_COMMENT_TAG !== $currentToken['code']
+                    \T_DOC_COMMENT_TAG !== $currentToken['code'] &&
+                    \T_PHPCS_DISABLE !== $currentToken['code'] &&
+                    \T_PHPCS_ENABLE !== $currentToken['code'] &&
+                    \T_CASE !== $currentToken['code'] &&
+                    \T_COLON !== $currentToken['code'] &&
+                    \T_CONSTANT_ENCAPSED_STRING !== $currentToken['code'] &&
+                    \T_LNUMBER !== $currentToken['code']
                 ) {
                     $error = 'Blank line should be before the control structure statement';
                     $fix = $phpcsFile->addFixableError($error, $stackPtr, 'Invalid');
