@@ -12,3 +12,6 @@ Forces single blank line before `return` statement, unless it is the first state
 
 ### Inspire.Sniffs.Methods.DisallowTracyDumpMethodsSniff
 Disallows debug statements in the code.
+
+### Inspire.Sniffs.Classes.EmptyInterfaceSniff
+Disallows interfaces with no methods.
