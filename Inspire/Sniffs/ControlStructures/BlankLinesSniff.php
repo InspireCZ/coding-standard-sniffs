@@ -113,7 +113,7 @@ class BlankLinesSniff implements Sniff
                     $i++;
                     continue;
                 }
-                if (\T_CLOSE_CURLY_BRACKET === $currentToken['code']) {
+                if (\T_CLOSE_CURLY_BRACKET === $currentToken['code'] && isset($currentToken['scope_condition'])) {
                     if (\T_DO === $tokens[$currentToken['scope_condition']]['code']) {
                         $result = true;
                         break;
