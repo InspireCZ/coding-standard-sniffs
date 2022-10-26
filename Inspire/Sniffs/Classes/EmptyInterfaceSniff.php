@@ -21,15 +21,20 @@ class EmptyInterfaceSniff implements Sniff
     {
         $tokens = $phpcsFile->getTokens();
         $hasFunction = false;
+        $hasConstant = false;
 
         foreach ($tokens as $token) {
             if (\T_FUNCTION === $token['code']) {
                 $hasFunction = true;
             }
+
+            if (\T_CONST === $token['code']) {
+                $hasConstant = true;
+            }
         }
 
-        if (false === $hasFunction) {
-            $phpcsFile->addError('Interface does not have any function.', $stackPtr, 'Invalid');
+        if (false === $hasFunction && false === $hasConstant) {
+            $phpcsFile->addError('Interface does not have any function nor any constant.', $stackPtr, 'Invalid');
         }
     }
 }
