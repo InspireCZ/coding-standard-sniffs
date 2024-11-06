@@ -4,6 +4,24 @@ Sniffs for INSPIRE Coding Standard.
 
 ## List of sniffs
 
+### Inspire.ControlStructures.ControlStructureSpacing 🔧
+Reports and fixes for correct spaces after control structures (exactly one space is expected, no more, no less).
+
+```php
+❌
+if($foo) {
+     //...
+}
+```
+
+
+```php
+👍
+if ($foo) { 
+     //...
+}
+```
+
 ### Inspire.ControlStructures.ClosingParenthesisOpeningCurlyBracketSameLineOnMultilineIf 🔧
 Reports when closing parenthesis is not on the same line as opening curly bracket of `if` with multiline condition.
 
