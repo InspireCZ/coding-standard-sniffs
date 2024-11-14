@@ -4,6 +4,21 @@ Sniffs for INSPIRE Coding Standard.
 
 ## List of sniffs
 
+### Inspire.ControlStructures.InlineCommentSpacing 🔧
+Reports and fixes invalid spaces count after inline comment start
+
+```php
+❌
+//wrong inline comment
+//   wrong inline comment
+```
+
+
+```php
+👍
+// correct inline comment with exactly one space after "//"
+```
+
 ### Inspire.ControlStructures.ControlStructureSpacing 🔧
 Reports and fixes for correct spaces after control structures (exactly one space is expected, no more, no less).
 
