@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2024-11-19
+### Added
+- Inspire.ControlStructure.DisallowHashComments sniff to check and fix hash comments (double slash comments are required)
+### Changed
+- Inspire.ControlStructure.InlineCommentSpacing checks for at least single space before inline comment
+
 ## [1.3.0] - 2024-11-14
 ### Added
 - Inspire.ControlStructure.InlineCommentSpacing sniff to check and fix number of spaces after // comment start
