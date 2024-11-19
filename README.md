@@ -4,6 +4,19 @@ Sniffs for INSPIRE Coding Standard.
 
 ## List of sniffs
 
+### Inspire.ControlStructures.DisallowHashComments 🔧
+Reports and fixes hash comments in the code.
+
+```php
+❌
+$correct = false; # This is (invalid) hash comment
+```
+
+```php
+👍
+$correct = true; // This is a valid comment
+```
+
 ### Inspire.ControlStructures.InlineCommentSpacing 🔧
 Reports and fixes invalid spaces count after inline comment start
 
