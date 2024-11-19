@@ -38,6 +38,23 @@ final class InlineCommentSpacingSniff implements Sniff
                     $phpcsFile->fixer->replaceToken($stackPtr, $fixedComment);
                 }
             }
+
+            // Check if there is at least one space before the `//` or `#`
+            $previousTokenPtr = $stackPtr - 1;
+            if ($previousTokenPtr >= 0) {
+                $previousToken = $tokens[$previousTokenPtr];
+
+                // Skip if the comment is at the start of the line
+                if (($previousToken['line'] === $tokens[$stackPtr]['line']) && $previousToken['code'] !== T_WHITESPACE) {
+                    // Add a single space before the comment
+                    $error = 'Inline comments must have at least one space before the comment when not at the start of the line.';
+                    $fix = $phpcsFile->addFixableError($error, $stackPtr, 'MissingSpaceBeforeComment');
+
+                    if ($fix === true) {
+                        $phpcsFile->fixer->addContentBefore($stackPtr, ' ');
+                    }
+                }
+            }
         }
     }
 }

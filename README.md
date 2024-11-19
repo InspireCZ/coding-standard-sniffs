@@ -18,18 +18,22 @@ $correct = true; // This is a valid comment
 ```
 
 ### Inspire.ControlStructures.InlineCommentSpacing 🔧
-Reports and fixes invalid spaces count after inline comment start
+Reports and fixes invalid spaces count before and after inline comment start
 
 ```php
 ❌
 //wrong inline comment
 //   wrong inline comment
+$a = 1; //wrong inline comment (missing space after "//")
+$b = 2;// also wrong inline comment (missing space before "//")
 ```
 
 
 ```php
 👍
 // correct inline comment with exactly one space after "//"
+$a = 1; // correct inline comment
+$b = 2; // correct inline comment
 ```
 
 ### Inspire.ControlStructures.ControlStructureSpacing 🔧
