@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] (new major version)
+- upgrade `squizlabs/php_codesniffer` to `v4`
+
 ## [1.4.0] - 2024-11-19
 ### Added
 - Inspire.ControlStructure.DisallowHashComments sniff to check and fix hash comments (double slash comments are required)
@@ -49,3 +52,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - migrated from private package inspire/coding-standard-sniffs
+
+[Unreleased]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.4.0...master
+[1.4.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.3.0...v1.4.0
+[1.3.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.2.0...v1.3.0
+[1.2.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.1.1...v1.2.0
+[1.1.1]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.1.0...v1.1.1
+[1.1.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.0.3...v1.1.0
+[1.0.3]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.0.2...v1.0.3
+[1.0.2]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.0.1...v1.0.2
+[1.0.1]: https://gitlab.webspire.eu/wsp-packages/inspirecz/compare/v1.0.0...v1.0.1
+[1.0.0]: https://gitlab.webspire.eu/wsp-packages/inspirecz/-/tags/v1.0.0

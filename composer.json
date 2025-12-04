@@ -10,14 +10,24 @@
         "standard"
     ],
     "require": {
-        "php": ">=7.0",
-        "squizlabs/php_codesniffer": "^3.2"
+        "php": ">=8.3",
+        "squizlabs/php_codesniffer": "^4"
     },
     "authors": [
         {
             "name": "INSPIRE CZ s.r.o.",
             "email": "firma@inspire.cz",
-	    "homepage": "https://www.inspire.cz/"
+            "homepage": "https://www.inspire.cz/"
         }
-    ]
+    ],
+    "config": {
+        "platform": {
+            "php": "8.5.0"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    }
 }
