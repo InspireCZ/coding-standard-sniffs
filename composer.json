@@ -1,5 +1,5 @@
 {
-    "type": "library",
+    "type": "phpcodesniffer-standard",
     "name": "inspirecz/coding-standard-sniffs",
     "description": "INSPIRE Coding Standard Sniffs",
     "license": "MIT",
