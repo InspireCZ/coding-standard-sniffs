@@ -13,6 +13,10 @@
         "php": ">=8.3",
         "squizlabs/php_codesniffer": "^4"
     },
+    "require-dev": {
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpunit/phpunit": "^12.0"
+    },
     "authors": [
         {
             "name": "INSPIRE CZ s.r.o.",
@@ -20,6 +24,24 @@
             "homepage": "https://www.inspire.cz/"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Inspire\\": "Inspire/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Inspire\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint": "php8.3 vendor/bin/parallel-lint Inspire",
+        "test": "php8.3 vendor/bin/phpunit",
+        "qa": [
+            "@lint",
+            "@test"
+        ]
+    },
     "config": {
         "platform": {
             "php": "8.5.0"
